@@ -3,15 +3,17 @@
 A responsive static website prepared for GitHub Pages.
 
 ## Included
-- `index.html` — Home, About, Services, Projects, Contact
+- `index.html` — Home, About, Services, Projects, Products, Contact
 - `styles.css` — responsive styling and brand colors
 - `script.js` — mobile navigation, current year, enquiry form mailto behavior
 - `assets/company-logo.jpg` — supplied company logo
+- Temporary illustrative building, service, and project images are included in `assets/` for preview.
 
 ## Before publishing
+- Replace all temporary illustrative images with approved company/project photos before presenting the portfolio as actual work.
 1. Replace `YOUR-COMPANY-EMAIL@example.com` in `script.js` with the official company email.
 2. Replace the contact placeholder in `index.html` with the approved phone number, email, and business address.
-3. Replace project placeholder cards with verified project details and approved images.
+3. Replace project and product placeholder visuals with approved photos and verified details. The Products section is a category guide, not a confirmed stock list.
 4. Review all company descriptions, services, and any claims before publishing.
 5. Test the site on desktop and mobile.
 

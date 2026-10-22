@@ -16,8 +16,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="5 EDGE home">
-        <img src="assets/company-logo.jpg" alt="5 EDGE Integrated Builders Corporation logo">
+      <a class="brand logo-view-trigger"
+         href="#company-logo-viewer"
+         aria-label="View enlarged 5 EDGE logo">
+         <img src="assets/company-logo.jpg"
+         alt="5 EDGE Integrated Builders Corporation logo">
+         <span class="logo-hint">Click to enlarge</span>
       </a>
       <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
@@ -231,6 +235,51 @@
       </div>
     </section>
   </main>
+
+  /* ===== 5 EDGE LOGO POPUP START ===== */
+  <div class="logo-viewer" id="company-logo-viewer"
+     role="dialog" aria-modal="true"
+     aria-labelledby="logo-viewer-title" aria-hidden="true">
+
+  <div class="logo-viewer-backdrop"
+       data-close-logo-viewer></div>
+
+  <div class="logo-viewer-panel">
+    <button class="logo-viewer-close" type="button"
+            aria-label="Close logo viewer"
+            data-close-logo-viewer>×</button>
+
+    <p class="eyebrow dark-eyebrow" id="logo-viewer-title">
+      OFFICIAL COMPANY LOGO
+    </p>
+
+    <img class="logo-viewer-image"
+         src="assets/company-logo.jpg"
+         alt="5 EDGE Integrated Builders Corporation logo">
+
+    <p class="logo-viewer-caption">
+      5 EDGE Integrated Builders Corporation
+    </p>
+
+    <div class="logo-viewer-actions">
+      <button class="button button-yellow"
+              id="copy-logo-button" type="button">
+        Copy logo image ⧉
+      </button>
+
+      <a class="button logo-download-button"
+         href="assets/company-logo.jpg"
+         download="5-edge-company-logo.jpg">
+        Download logo ↓
+      </a>
+    </div>
+
+    <p class="logo-viewer-status" id="logo-viewer-status"
+       role="status" aria-live="polite">
+      Click Copy logo image or right-click the logo to copy it.
+    </p>
+  </div>
+</div>
 
   <footer class="site-footer">
     <div class="container footer-main">

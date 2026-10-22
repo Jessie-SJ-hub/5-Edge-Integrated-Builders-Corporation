@@ -432,3 +432,130 @@ h2 { font-size: clamp(34px, 4vw, 49px); }
     max-width: 440px;
   }
 }
+
+/* Clickable company logo */
+.logo-view-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo-view-trigger img {
+  cursor: zoom-in;
+}
+
+.logo-hint {
+  font-size: 9px;
+  color: #595d5a;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.logo-view-trigger:hover .logo-hint,
+.logo-view-trigger:focus-visible .logo-hint {
+  opacity: 1;
+}
+
+/* Enlarged logo popup */
+.logo-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-viewer.is-open {
+  display: flex;
+}
+
+.logo-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 19, 12, .82);
+  backdrop-filter: blur(5px);
+}
+
+.logo-viewer-panel {
+  position: relative;
+  z-index: 1;
+  width: min(540px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 32px;
+  background: #fff;
+  color: #18221d;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .28);
+}
+
+.logo-viewer-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  background: #f0f2ee;
+  color: #123d2b;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.logo-viewer-image {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  max-height: 58vh;
+  object-fit: contain;
+  margin: 20px auto;
+  cursor: copy;
+}
+
+.logo-viewer-caption {
+  font-weight: 800;
+  margin: 12px 0 20px;
+}
+
+.logo-viewer-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo-download-button {
+  background: #123d2b;
+  color: #fff;
+}
+
+.logo-viewer-status {
+  font-size: 11px;
+  color: #657068;
+  margin-top: 14px;
+}
+
+body.logo-viewer-open {
+  overflow: hidden;
+}
+
+@media (max-width: 680px) {
+  .logo-viewer-panel {
+    padding: 28px 18px;
+  }
+
+  .logo-viewer-image {
+    max-height: 48vh;
+  }
+
+  .logo-viewer-actions {
+    flex-direction: column;
+  }
+
+  .logo-viewer-actions .button {
+    width: 100%;
+  }
+}

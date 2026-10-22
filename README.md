@@ -31,3 +31,9 @@ Open `index.html` in a browser. For a local web server, run `python -m http.serv
 - This is a static website; no backend or database is configured.
 - The enquiry form uses the visitor's email application (`mailto:`) after the official email is configured. For a server-backed form, connect a form service or backend later.
 - Google Fonts are loaded externally; system fallback fonts are included.
+
+## Responsive hero
+The hero section scales with larger desktop and monitor viewports using viewport-aware sizing, while the existing tablet/mobile layouts remain in place.
+
+## Hero layout update
+This update targets the existing `.hero-art` and `.hero-inner` selectors, enlarging the hero section and illustration on desktop and large monitors while preserving mobile layout behavior.

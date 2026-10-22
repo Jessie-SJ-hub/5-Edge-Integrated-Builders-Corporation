@@ -41,3 +41,82 @@ if (form) {
     status.textContent = "Your email app should open with the enquiry drafted. Please review and send it.";
   });
 }
+
+// Company logo viewer
+const logoViewer = document.querySelector("#company-logo-viewer");
+const logoTrigger = document.querySelector(".logo-view-trigger");
+const logoCloseControls = document.querySelectorAll(
+  "[data-close-logo-viewer]"
+);
+const copyLogoButton = document.querySelector("#copy-logo-button");
+const logoViewerStatus = document.querySelector("#logo-viewer-status");
+
+function openLogoViewer(event) {
+  event.preventDefault();
+
+  logoViewer.classList.add("is-open");
+  logoViewer.setAttribute("aria-hidden", "false");
+  document.body.classList.add("logo-viewer-open");
+
+  logoViewer.querySelector(".logo-viewer-close").focus();
+}
+
+function closeLogoViewer() {
+  logoViewer.classList.remove("is-open");
+  logoViewer.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("logo-viewer-open");
+  logoTrigger.focus();
+}
+
+if (logoTrigger && logoViewer) {
+  logoTrigger.addEventListener("click", openLogoViewer);
+
+  logoCloseControls.forEach((button) => {
+    button.addEventListener("click", closeLogoViewer);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      logoViewer.classList.contains("is-open")
+    ) {
+      closeLogoViewer();
+    }
+  });
+}
+
+if (copyLogoButton) {
+  copyLogoButton.addEventListener("click", async () => {
+    try {
+      const response = await fetch("assets/company-logo.jpg");
+
+      if (!response.ok) {
+        throw new Error("Could not load logo image.");
+      }
+
+      const blob = await response.blob();
+
+      if (
+        !navigator.clipboard ||
+        typeof ClipboardItem === "undefined" ||
+        !navigator.clipboard.write
+      ) {
+        throw new Error(
+          "Image copying is not supported here. Right-click the logo and choose Copy image."
+        );
+      }
+
+      await navigator.clipboard.write([
+        new ClipboardItem({ [blob.type]: blob })
+      ]);
+
+      logoViewerStatus.textContent =
+        "Logo copied! You can now paste it into another app.";
+
+    } catch (error) {
+      logoViewerStatus.textContent =
+        error.message ||
+        "Copy failed. Try right-clicking the image and choosing Copy image.";
+    }
+  });
+}

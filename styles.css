@@ -300,7 +300,8 @@ button {
   flex: 1;
 
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 36px;
 
   align-items: center;
   gap: 48px;
@@ -517,7 +518,7 @@ button {
   min-width: 0;
   max-width: none;
 
-  height: clamp(420px, 42vw, 700px);
+  height: clamp(500px, 48vw, 780px);
   min-height: 0;
 
   align-self: stretch;

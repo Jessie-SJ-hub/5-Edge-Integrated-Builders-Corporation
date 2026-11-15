@@ -1,0 +1,86 @@
+/* 5 EDGE - ABOUT PAGE */
+.about-page{overflow-x:hidden;overflow-y:auto;background:#f3f5f1}
+.about-page .header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e9e4}
+.about-page .nav-wrap{height:88px}
+.about-page .brand{display:block;border:0;padding:0;background:transparent;cursor:pointer}
+.about-page nav a{color:#123d2b}
+.about-page nav a.active{color:#9b7d00}
+.about-page .nav-cta{background:#f4c928;color:#123d2b}
+.about-container{width:min(1180px,88%);margin:0 auto}
+.about-section{padding:110px 0}
+.about-kicker{margin:0 0 24px;color:#8b792e;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.about-hero{min-height:590px;position:relative;display:flex;align-items:center;overflow:hidden;color:#fff;background:#08271d}
+.about-hero-image,.about-hero-shade{position:absolute;inset:0}
+.about-hero-image{background:url("assets/hero-5edge.png") center 43%/cover no-repeat}
+.about-hero-shade{background:linear-gradient(90deg,rgba(4,22,16,.94),rgba(4,22,16,.76) 48%,rgba(4,22,16,.18))}
+.about-hero-content{position:relative;z-index:1;width:min(1180px,88%);margin:0 auto;padding:95px 0 110px}
+.about-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:28px;color:#e1e8e2;font-size:10px;font-weight:800;letter-spacing:.18em}
+.about-eyebrow span{width:28px;height:2px;background:#f4c928}
+.about-hero h1{max-width:850px;margin:0 0 24px;font:800 clamp(48px,6.5vw,88px)/1.02 Manrope,sans-serif;letter-spacing:-.065em}
+.about-hero h1 em,.intro-heading h2 em,.section-heading-about h2 em,.mission-title em,.president-side h2 em{color:#f4c928;font-style:normal}
+.about-hero-content>p:last-child{max-width:550px;margin:0;color:#e1e7e2;font-size:15px;line-height:1.8}
+.about-hero-bottom{position:absolute;right:6%;bottom:0;left:6%;display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.8);font-size:9px;font-weight:800;letter-spacing:.15em}
+.about-intro{background:#fff}
+.intro-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:10%;align-items:start}
+.intro-heading h2,.section-heading-about h2,.mission-title,.president-side h2{margin:0;color:#17231d;font:800 clamp(42px,5vw,66px)/1.05 Manrope,sans-serif;letter-spacing:-.065em}
+.intro-heading h2 em,.section-heading-about h2 em{color:#123d2b;font-style:normal}
+.intro-copy p{color:#68736c;font-size:14px;line-height:1.9}
+.intro-copy .intro-lead{margin-bottom:22px;color:#17231d;font-size:19px;font-weight:600;line-height:1.6}
+.capability-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:80px;padding-top:30px;border-top:1px solid #dce1da}
+.capability-strip article{position:relative;padding-left:42px}
+.capability-strip article>span{position:absolute;top:3px;left:0;color:#a58a2a;font-size:11px;font-weight:800}
+.capability-strip h3{margin:0 0 9px;color:#123d2b;font:800 19px Manrope,sans-serif}
+.capability-strip p{margin:0;color:#68736c;font-size:12px;line-height:1.8}
+.integrated-section,.values-section{background:#f3f5f1}
+.section-heading-about{display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:55px}
+.section-heading-about>p{max-width:390px;margin:0 0 5px;color:#68736c;font-size:14px;line-height:1.9}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d6ddd5;border-left:1px solid #d6ddd5}
+.process-step{min-height:165px;display:flex;gap:20px;padding:28px 25px;border-right:1px solid #d6ddd5;border-bottom:1px solid #d6ddd5;background:rgba(255,255,255,.55)}
+.step-number{flex:0 0 auto;color:#a58a2a;font:800 14px Manrope,sans-serif}
+.process-step h3{margin:0 0 9px;color:#123d2b;font:800 19px Manrope,sans-serif;text-transform:uppercase}
+.process-step p{margin:0;color:#68736c;font-size:12px;line-height:1.8}
+.process-banner{margin-top:35px;padding:23px 25px;background:#123d2b;color:#fff;text-align:center;font-size:11px;font-weight:800;letter-spacing:.15em}
+.process-banner span{color:#f4c928}
+.mission-section{background:#fff}
+.mission-title{margin-bottom:55px}
+.mission-title em{color:#123d2b}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.mission-card{min-height:250px;display:grid;grid-template-columns:145px 1fr;background:#123d2b;color:#fff}
+.vision-card{background:#263b30}
+.mission-label{display:flex;align-items:center;justify-content:center;padding:20px;background:#f4c928;color:#123d2b;font:800 16px Manrope,sans-serif;text-align:center}
+.mission-copy{padding:30px}
+.mission-copy span{display:block;margin-bottom:18px;color:#e3c64e;font-size:9px;font-weight:800;letter-spacing:.16em}
+.mission-copy p{margin:0;color:#e5ece6;font-size:13px;line-height:1.9}
+.values-heading{margin-bottom:45px}
+.values-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}
+.value-card{grid-column:span 2;min-height:220px;padding:27px;background:#fff;border-top:3px solid #f4c928;box-shadow:0 8px 24px rgba(18,61,43,.045)}
+.value-card:nth-child(4){grid-column:2/span 2}
+.value-card>span{color:#a58a2a;font-size:10px;font-weight:800;letter-spacing:.1em}
+.value-card h3{margin:23px 0 12px;color:#123d2b;font:800 19px/1.25 Manrope,sans-serif}
+.value-card p{margin:0;color:#68736c;font-size:12px;line-height:1.8}
+.president-section{background:#08271d;color:#fff}
+.president-layout{display:grid;grid-template-columns:.72fr 1.28fr;gap:10%;align-items:start}
+.president-side{position:sticky;top:125px}
+.president-side h2{color:#fff}
+.president-mark{margin-top:65px;color:#f4c928;font:800 38px Manrope,sans-serif;letter-spacing:-.06em}
+.president-tagline{margin:4px 0 0;color:#aab9ae;font-size:9px;font-weight:800;letter-spacing:.13em;line-height:1.8}
+.president-message{position:relative;padding-top:8px}
+.quote-mark{display:block;height:55px;color:#f4c928;font:800 90px/1 Georgia,serif}
+.president-message p{color:#d5ded7;font-size:13px;line-height:1.95}
+.president-signature{display:flex;flex-direction:column;gap:5px;margin-top:35px;padding-top:25px;border-top:1px solid rgba(255,255,255,.25)}
+.president-signature strong{color:#fff;font:800 16px Manrope,sans-serif}
+.president-signature span{color:#aab9ae;font-size:11px}
+.about-cta{padding:90px 0;background:#f4c928}
+.about-cta-inner{display:flex;align-items:end;justify-content:space-between;gap:30px}
+.about-cta .about-kicker{color:#5d4b00}
+.about-cta h2{margin:0;color:#123d2b;font:800 clamp(48px,6vw,76px)/.98 Manrope,sans-serif;letter-spacing:-.065em}
+.about-cta-button{display:inline-flex;align-items:center;gap:25px;padding:18px 24px;background:#123d2b;color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.about-cta-button span{color:#f4c928;font-size:18px}
+.about-page .site-footer{background:#061b13;color:#fff;padding:42px 6% 18px}
+.about-page .footer-brand{display:block;width:145px;height:65px}
+.about-page .footer-brand img{width:100%;height:100%;object-fit:contain}
+.about-page .footer-main p{color:#c1ccc4;font-size:12px;line-height:1.8}
+.about-page .footer-main>a:last-child{color:#fff;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.about-page .footer-bottom a{color:#aebbb1}
+@media(max-width:900px){.about-container,.about-hero-content{width:88%}.about-section{padding:85px 0}.intro-layout,.president-layout{grid-template-columns:1fr;gap:35px}.president-side{position:static}.president-mark{margin-top:30px}.mission-card{grid-template-columns:110px 1fr}.mission-copy{padding:25px}.value-card{grid-column:span 3}.value-card:nth-child(4){grid-column:span 3}.value-card:nth-child(5){grid-column:2/span 4}}
+@media(max-width:640px){.about-page .nav-wrap{height:72px;padding:0 5%}.about-page .brand{width:135px;height:55px}.about-page .menu-toggle{display:flex!important}.about-page nav{display:none;position:absolute;top:71px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:15px 6% 22px;background:#e9eee8;border-top:1px solid #dce1da;box-shadow:0 12px 25px rgba(0,0,0,.10)}.about-page nav.open{display:flex}.about-page nav a:not(.nav-cta){padding:20px 12px;color:#123d2b;border-bottom:1px solid #d3ddd2}.about-page nav .nav-cta{margin-top:18px;padding:17px 20px;background:#f4c928;color:#123d2b;text-align:center}.about-hero{min-height:540px}.about-hero-content{width:86%;padding:80px 0 100px}.about-eyebrow{font-size:8px;line-height:1.7}.about-hero h1{font-size:clamp(42px,11vw,62px)}.about-hero-content>p:last-child{font-size:13px}.about-hero-bottom{right:7%;left:7%;font-size:7px}.about-hero-bottom span:last-child{display:none}.about-section{padding:72px 0}.about-container{width:86%}.intro-heading h2,.section-heading-about h2,.mission-title,.president-side h2{font-size:clamp(39px,10vw,52px)}.intro-copy .intro-lead{font-size:17px}.intro-copy p{font-size:13px}.capability-strip{grid-template-columns:1fr;gap:24px;margin-top:45px}.section-heading-about{display:block;margin-bottom:35px}.section-heading-about>p{margin-top:22px;font-size:13px}.process-grid{grid-template-columns:1fr}.process-step{min-height:125px;padding:23px 18px}.process-banner{padding:20px 15px;font-size:9px;line-height:1.7}.mission-title{margin-bottom:35px}.mission-grid{grid-template-columns:1fr;gap:15px}.mission-card{grid-template-columns:95px 1fr;min-height:0}.mission-label{padding:12px;font-size:12px}.mission-copy{padding:22px 18px}.mission-copy p{font-size:12px}.values-grid{grid-template-columns:1fr;gap:13px}.value-card,.value-card:nth-child(4),.value-card:nth-child(5){grid-column:auto;min-height:0;padding:23px}.value-card h3{margin-top:15px}.president-mark{font-size:30px}.president-message p{font-size:12px}.about-cta{padding:70px 0}.about-cta-inner{display:block}.about-cta h2{font-size:55px}.about-cta-button{margin-top:30px}.about-page .footer-main{flex-wrap:wrap}.about-page .footer-main p{order:3;width:100%;margin:0}.about-page .footer-bottom{align-items:flex-start;flex-direction:column;gap:10px}}

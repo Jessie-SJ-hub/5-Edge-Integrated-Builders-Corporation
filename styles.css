@@ -1416,55 +1416,37 @@ body {
     background: #ffda43;
 }
 
-/* MOBILE MENU BUTTON VISIBILITY */
+/* =====================================
+   5 EDGE - RESPONSIVE MOBILE NAVIGATION
+   ===================================== */
+
+/* DEFAULT: DESKTOP */
 .menu-toggle {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 8px;
-    background: transparent;
-    border: 1px solid #174C35;
-    border-radius: 4px;
-    color: #174C35 !important;
-    cursor: pointer;
-    z-index: 1000;
+    display: none !important;
 }
 
-.menu-toggle span {
-    background-color: #174C35 !important;
-}
-
-
-/* =================================
-   MOBILE MENU BUTTON - 5 EDGE
-   ================================= */
-
+/* MOBILE ONLY */
 @media (max-width: 640px) {
 
     .menu-toggle {
         display: flex !important;
-        position: relative;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 5px;
         width: 44px;
         height: 44px;
         padding: 0;
+        background: #ffffff;
         border: 1px solid #123d2b;
         border-radius: 4px;
-        background: #ffffff;
-        color: #123d2b;
         cursor: pointer;
         z-index: 1000;
-        font-size: 0;
     }
 
-    /* Draw hamburger icon */
     .menu-toggle::before {
         content: "";
-        display: block;
-        width: 23px;
+        width: 22px;
         height: 2px;
         background: #123d2b;
         box-shadow: 0 7px 0 #123d2b,
@@ -1474,41 +1456,25 @@ body {
     .menu-toggle span {
         display: none;
     }
-}
 
-
-/* =================================
-   MOBILE NAVIGATION PANEL
-   ================================= */
-
-@media (max-width: 640px) {
-
+    /* DROPDOWN PANEL */
     nav {
-        background: #f3f5f1 !important;
-        padding: 15px 6% 22px !important;
-        box-shadow: 0 12px 25px rgba(0,0,0,0.10);
+        background: #e9eee8 !important;
         border-top: 1px solid #dce1da;
+        box-shadow: 0 12px 25px rgba(0,0,0,.10);
+        padding: 15px 6% 22px !important;
     }
 
     nav a:not(.nav-cta) {
-        display: block;
-        padding: 20px 12px !important;
         color: #123d2b !important;
-        border-bottom: 1px solid #dce1da !important;
-        font-size: 12px;
-        letter-spacing: 0.12em;
-    }
-
-    nav a:not(.nav-cta):active {
-        background: #e5ebe4;
+        padding: 20px 12px !important;
+        border-bottom: 1px solid #d3ddd2 !important;
     }
 
     nav .nav-cta {
-        display: block;
-        margin-top: 18px;
-        padding: 17px 20px;
-        background: #f4c928;
+        background: #f4c928 !important;
         color: #123d2b !important;
+        margin-top: 18px;
         text-align: center;
     }
 }

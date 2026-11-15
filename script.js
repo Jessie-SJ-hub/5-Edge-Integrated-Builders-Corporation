@@ -96,3 +96,33 @@ if (contactForm) {
             'Your email application should open with the enquiry draft.';
     });
 }
+
+
+// ==========================================
+// COMPANY LOGO PREVIEW
+// ==========================================
+
+const logoTrigger = document.querySelector(".logo-trigger");
+const logoModal = document.getElementById("logo-modal");
+const logoClose = document.getElementById("logo-close");
+
+logoTrigger.addEventListener("click", function () {
+    logoModal.classList.add("open");
+});
+
+logoClose.addEventListener("click", function () {
+    logoModal.classList.remove("open");
+});
+
+logoModal.addEventListener("click", function (event) {
+    if (event.target === logoModal) {
+        logoModal.classList.remove("open");
+    }
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        logoModal.classList.remove("open");
+    }
+});
+

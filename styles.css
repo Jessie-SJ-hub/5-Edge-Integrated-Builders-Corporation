@@ -1478,3 +1478,24 @@ body {
         text-align: center;
     }
 }
+
+/* MOBILE DROPDOWN BACKGROUND FIX */
+@media (max-width: 640px) {
+
+    nav.open {
+        display: flex !important;
+        background-color: #e9eee8 !important;
+        border-top: 1px solid #dce1da;
+        box-shadow: 0 12px 25px rgba(0,0,0,0.10);
+    }
+
+    nav.open a:not(.nav-cta) {
+        color: #123d2b !important;
+        border-bottom: 1px solid #d3ddd2 !important;
+    }
+
+    nav.open .nav-cta {
+        background: #f4c928 !important;
+        color: #123d2b !important;
+    }
+}

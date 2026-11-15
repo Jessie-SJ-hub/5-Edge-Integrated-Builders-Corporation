@@ -1012,3 +1012,215 @@ footer
         transition:none!important
     }
 }
+
+/* ==========================================
+   5 EDGE WEBSITE - LANDING PAGE UPDATE
+   FULL SCREEN HERO
+   ========================================== */
+
+/* GENERAL PAGE SETTINGS */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* HEADER AND NAVIGATION */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-wrap {
+    height: 88px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.brand {
+    width: 175px;
+    height: 68px;
+}
+
+nav {
+    gap: 32px;
+}
+
+/* FULL SCREEN HERO */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+    max-height: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-photo {
+    position: absolute;
+    inset: 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 22, 16, 0.90) 0%,
+            rgba(4, 22, 16, 0.65) 45%,
+            rgba(4, 22, 16, 0.12) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 120px 8% 50px;
+}
+
+/* MAIN TAGLINE */
+
+.hero h1 {
+    font-family: var(--display);
+    font-size: clamp(58px, 7vw, 100px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.065em;
+    margin: 0 0 8px;
+}
+
+.hero h1 em {
+    color: var(--yellow);
+    font-style: normal;
+}
+
+/* SECOND TAGLINE */
+
+.hero .hero-tagline {
+    font-family: var(--display);
+    font-size: clamp(58px, 7vw, 100px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.065em;
+    color: var(--yellow);
+    margin: 0 0 24px;
+}
+
+/* HERO DESCRIPTION */
+
+.hero-desc {
+    max-width: 570px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #e1e7e2;
+    margin: 0;
+}
+
+/* REMOVE UNUSED HERO DECORATIONS */
+
+.hero-index,
+.hero-foot,
+.eyebrow,
+.actions {
+    display: none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 640px) {
+
+    .nav-wrap {
+        height: 72px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .brand {
+        width: 135px;
+        height: 55px;
+    }
+
+    .hero {
+        height: 100vh;
+        height: 100svh;
+        min-height: 0;
+        max-height: none;
+        align-items: center;
+    }
+
+    .hero-photo {
+        background-position: 58% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(4, 22, 16, 0.92) 0%,
+                rgba(4, 22, 16, 0.60) 60%,
+                rgba(4, 22, 16, 0.30) 100%
+            );
+    }
+
+    .hero-content {
+        padding: 100px 7% 40px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11vw, 64px);
+        line-height: 1.04;
+        margin-bottom: 8px;
+    }
+
+    .hero .hero-tagline {
+        font-size: clamp(42px, 11vw, 64px);
+        line-height: 1.04;
+        margin-bottom: 20px;
+    }
+
+    .hero-desc {
+        max-width: 420px;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    nav {
+        top: 71px;
+    }
+}
+
+/* TABLET RESPONSIVE */
+
+@media (min-width: 641px) and (max-width: 900px) {
+
+    .hero h1,
+    .hero .hero-tagline {
+        font-size: clamp(52px, 7vw, 72px);
+    }
+
+    .hero-content {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+}

@@ -1416,4 +1416,22 @@ body {
     background: #ffda43;
 }
 
+/* MOBILE MENU BUTTON VISIBILITY */
+.menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #174C35;
+    border-radius: 4px;
+    color: #174C35 !important;
+    cursor: pointer;
+    z-index: 1000;
+}
 
+.menu-toggle span {
+    background-color: #174C35 !important;
+}

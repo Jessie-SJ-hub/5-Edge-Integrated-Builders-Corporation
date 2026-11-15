@@ -1224,3 +1224,118 @@ nav {
     }
 
 }
+
+
+/* ==========================================
+   5 EDGE - HOMEPAGE DESIGN UPDATE
+   ========================================== */
+
+/* WHITE HEADER */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 88px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e9e4;
+}
+
+.nav-wrap {
+    height: 88px;
+}
+
+.brand img {
+    filter: none;
+}
+
+nav a {
+    color: #123d2b;
+}
+
+nav a:hover {
+    color: #b18d00;
+}
+
+.nav-cta {
+    background: #f4c928;
+    color: #123d2b;
+}
+
+/* HERO TAGLINE COLORS */
+
+.hero h1,
+.hero .hero-tagline {
+    font-family: var(--display);
+    font-size: clamp(58px, 7vw, 100px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.065em;
+}
+
+.hero h1 em {
+    color: #f4c928;
+}
+
+.hero .hero-tagline {
+    color: #ffffff;
+    margin: 0 0 24px;
+}
+
+.hero .hero-tagline .yellow {
+    color: #f4c928;
+}
+
+/* HOMEPAGE VIEWPORT */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero {
+    height: calc(100vh - 88px);
+    height: calc(100svh - 88px);
+    min-height: 0;
+    max-height: none;
+    margin-top: 88px;
+}
+
+/* MOBILE HEADER */
+
+@media (max-width: 640px) {
+
+    .header {
+        height: 72px;
+    }
+
+    .nav-wrap {
+        height: 72px;
+    }
+
+    nav {
+        background: #ffffff;
+        top: 71px;
+    }
+
+    nav a {
+        color: #123d2b;
+    }
+
+    .hero {
+        height: calc(100vh - 72px);
+        height: calc(100svh - 72px);
+        margin-top: 72px;
+        min-height: 0;
+    }
+
+    .hero h1,
+    .hero .hero-tagline {
+        font-size: clamp(42px, 11vw, 64px);
+    }
+
+}
+

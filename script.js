@@ -98,31 +98,47 @@ if (contactForm) {
 }
 
 
-// ==========================================
-// COMPANY LOGO PREVIEW
-// ==========================================
+/* ---------------------------------------------------------
+   5. COMPANY LOGO PREVIEW
+   --------------------------------------------------------- */
 
-const logoTrigger = document.querySelector(".logo-trigger");
-const logoModal = document.getElementById("logo-modal");
-const logoClose = document.getElementById("logo-close");
+document.addEventListener('DOMContentLoaded', () => {
 
-logoTrigger.addEventListener("click", function () {
-    logoModal.classList.add("open");
-});
+    const logoTrigger = document.querySelector('.logo-trigger');
+    const logoModal = document.querySelector('#logo-modal');
+    const logoClose = document.querySelector('#logo-close');
 
-logoClose.addEventListener("click", function () {
-    logoModal.classList.remove("open");
-});
-
-logoModal.addEventListener("click", function (event) {
-    if (event.target === logoModal) {
-        logoModal.classList.remove("open");
+    if (!logoTrigger || !logoModal || !logoClose) {
+        console.warn('Logo preview elements not found.');
+        return;
     }
-});
 
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-        logoModal.classList.remove("open");
+    // OPEN LOGO PREVIEW
+    logoTrigger.addEventListener('click', () => {
+        logoModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // CLOSE LOGO PREVIEW
+    function closeLogoPreview() {
+        logoModal.classList.remove('open');
+        document.body.style.overflow = '';
     }
-});
 
+    logoClose.addEventListener('click', closeLogoPreview);
+
+    // CLOSE WHEN CLICKING OUTSIDE THE LOGO
+    logoModal.addEventListener('click', (event) => {
+        if (event.target === logoModal) {
+            closeLogoPreview();
+        }
+    });
+
+    // CLOSE USING ESCAPE KEY
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeLogoPreview();
+        }
+    });
+
+});

@@ -20,9 +20,12 @@
   </a>
   <header class="header" id="top">
    <div class="nav-wrap">
-    <a class="brand" href="#top">
-     <img alt="5 EDGE Integrated Builders Corporation" src="assets/company-logo.png"/>
-    </a>
+    <button class="brand logo-trigger" type="button" aria-label="View company logo">
+    <img
+        src="assets/company-logo.png"
+        alt="5 EDGE Integrated Builders Corporation"
+    >
+    </button>
     <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle">
      ☰
     </button>
@@ -642,5 +645,32 @@
   </footer>
   <script src="script.js">
   </script>
+
+  <!-- COMPANY LOGO PREVIEW -->
+
+<div class="logo-modal" id="logo-modal">
+
+    <button class="logo-close" id="logo-close" aria-label="Close">
+        &times;
+    </button>
+
+    <div class="logo-modal-content">
+
+        <img
+            src="assets/company-logo.png"
+            alt="5 EDGE Integrated Builders Corporation Logo"
+        >
+
+        <a
+            href="assets/company-logo.png"
+            download="5-EDGE-Company-Logo.png"
+            class="logo-download"
+        >
+            Download Logo &darr;
+        </a>
+
+    </div>
+
+</div>
  </body>
 </html>
